@@ -1,4 +1,4 @@
-from __future__ import annotations
+from typing import Iterable, Any
 
 
 class CinemaHall:
@@ -8,8 +8,8 @@ class CinemaHall:
     def movie_session(
         self,
         movie_name: str,
-        customers: list,
-        cleaning_staff: "Cleaner"
+        customers: Iterable[Any],
+        cleaning_staff: Any,
     ) -> None:
         print(f'"{movie_name}" started in hall number {self.number}.')
         for customer in customers:
